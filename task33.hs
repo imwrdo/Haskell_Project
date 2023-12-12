@@ -10,10 +10,12 @@ znajdzM n = znajdzM' 1
 
 countSolutions :: Int -> Int -> Int -> Int
 countSolutions m a b
-  | a == 100 = 0
-  | b == 100 = countSolutions m (a + 1) (a + 1)
-  | czyRownanie a b m = 1 + countSolutions m a (b + 1)
-  | otherwise = countSolutions m a (b + 1)
+  | a == 1000 = 0
+  | b == 1000 = countSolutions m (a + 1) (a + 1)
+  | otherwise =
+    let result = if czyRownanie a b m then 1 else 0
+    in result + countSolutions m a (b + 1)
+
 
 main :: IO ()
 main = do
