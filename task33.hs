@@ -17,6 +17,8 @@ countSolutions m a b
 
 main :: IO ()
 main = do
-  let n = 3
-      m = znajdzM n
-  putStrLn $ "Dla n = " ++ show n ++ " m = " ++ show m
+    putStrLn "Podaj liczbe n:"
+    input <- getLine
+    let n = read input :: Int
+        m = znajdzM n
+    putStrLn $ "Dla n = " ++ show n ++ " m = " ++ show m
