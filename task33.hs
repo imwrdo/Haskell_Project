@@ -1,26 +1,22 @@
-czyRownanie :: Int -> Int -> Int -> Bool
-czyRownanie a b m = (a + b) * m == a * b
 
-znajdzM :: Int -> Int
-znajdzM n = znajdzM' 1
+countSolutions :: Int -> IO Int
+countSolutions m = do
+    let solutions = [ (a, b) | a <- [m + 1 .. 2 * m], let b = (m * a) `div` (a - m), (m * a) `mod` (a - m) == 0 ]
+    
+    return $ length solutions
+
+findMinM :: Int -> IO Int
+findMinM n = findMinM' (n + 1)
   where
-    znajdzM' m
-      | countSolutions m 1 1 >= n = m
-      | otherwise = znajdzM' (m + 1)
-
-countSolutions :: Int -> Int -> Int -> Int
-countSolutions m a b
-  | a == 1000 = 0
-  | b == 1000 = countSolutions m (a + 1) (a + 1)
-  | otherwise =
-    let result = if czyRownanie a b m then 1 else 0
-    in result + countSolutions m a (b + 1)
-
+    findMinM' m = do
+        solutionsCount <- countSolutions m
+        if solutionsCount < n
+            then findMinM' (m + 1)
+            else return m
 
 main :: IO ()
 main = do
-    putStrLn "Podaj liczbe n:"
-    input <- getLine
-    let n = read input :: Int
-        m = znajdzM n
-    putStrLn $ "Dla n = " ++ show n ++ " m = " ++ show m
+    putStrLn "Podaj liczbe naturalna n: "
+    n <- readLn
+    m <- findMinM n
+    putStrLn $ "Dla n = " ++ show n ++ ", m = " ++ show m ++ " jest najmniejszym m, dla ktorego liczba rozwiazan jest >= n."
