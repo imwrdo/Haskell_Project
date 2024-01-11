@@ -1,8 +1,34 @@
-# Project Title
-This project presents a solution to a task from the subject "Programming Languages", which aims to develop programming skills in different languages.
-In the submitted project, I performed the task in the Haskell language.
-The content of the task:
-For a given natural number n, give a natural number m for which the number of possible solutions of the
-of the equation 1/a + 1/b = 1/m (where a and b are natural numbers) is greater than or equal to n.
-For example, for n = 3 it will be m = 4 because there are exactly three solutions to this equation:
-a1 = 5 and b1 = 20, a2 = 6 and b2 = 12, a3 = 8 and b3 = 8 ie: 1/5+1/20 = 1/4, 1/6+1/18 = 1/4 i 1/8+1/8 = 1/4.
+# Project Title: Haskell Equation Solver
+
+## Overview
+
+This project is a solution to a task from the "Programming Languages" course, designed to enhance programming skills across various languages. In this implementation, the task is tackled using Haskell.
+
+## Task Description
+
+Given a natural number `n`, the goal is to find a natural number `m` for which the number of possible solutions of the equation:
+
+\[ \frac{1}{a} + \frac{1}{b} = \frac{1}{m} \]
+
+where \(a\) and \(b\) are natural numbers, is greater than or equal to `n`.
+
+### Example
+
+For instance, if \(n = 3\), the solution would be \(m = 4\). This is because there are precisely three solutions to the equation:
+
+1. \(a_1 = 5\) and \(b_1 = 20\): \(\frac{1}{5} + \frac{1}{20} = \frac{1}{4}\)
+2. \(a_2 = 6\) and \(b_2 = 12\): \(\frac{1}{6} + \frac{1}{18} = \frac{1}{4}\)
+3. \(a_3 = 8\) and \(b_3 = 8\): \(\frac{1}{8} + \frac{1}{8} = \frac{1}{4}\)
+
+## Getting Started
+
+### Prerequisites
+
+Ensure that you have Haskell installed on your machine.
+
+```bash
+# Install Haskell on Linux
+sudo apt-get install haskell-platform
+
+# Install Haskell on macOS
+brew install haskell-platform
