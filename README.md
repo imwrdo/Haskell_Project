@@ -8,17 +8,17 @@ This project is a solution to a task from the "Programming Languages" course, de
 
 Given a natural number `n`, the goal is to find a natural number `m` for which the number of possible solutions of the equation:
 
-\frac{n!}{k!(n-k)!}
+$\ \frac{1}{a} + \frac{1}{b} = \frac{1}{m} \$
 
-where \(a\) and \(b\) are natural numbers, is greater than or equal to `n`.
+where $\(a\)$ and $\(b\)$ are natural numbers, is greater than or equal to `n`.
 
 ### Example
 
-For instance, if \(n = 3\), the solution would be \(m = 4\). This is because there are precisely three solutions to the equation:
+For instance, if $\(n = 3\)$, the solution would be $\(m = 4\)$. This is because there are precisely three solutions to the equation:
 
-1. \(a_1 = 5\) and \(b_1 = 20\): \(\frac{1}{5} + \frac{1}{20} = \frac{1}{4}\)
-2. \(a_2 = 6\) and \(b_2 = 12\): \(\frac{1}{6} + \frac{1}{18} = \frac{1}{4}\)
-3. \(a_3 = 8\) and \(b_3 = 8\): \(\frac{1}{8} + \frac{1}{8} = \frac{1}{4}\)
+1. $\(a_1 = 5\)  and  \(b_1 = 20\): \(\frac{1}{5} + \frac{1}{20} = \frac{1}{4}\)$
+2. $\(a_2 = 6\)  and  \(b_2 = 12\): \(\frac{1}{6} + \frac{1}{18} = \frac{1}{4}\)$
+3. $\(a_3 = 8\)  and  \(b_3 = 8\): \(\frac{1}{8} + \frac{1}{8} = \frac{1}{4}\)$
 
 ## Getting Started
 
@@ -32,3 +32,30 @@ sudo apt-get install haskell-platform
 
 # Install Haskell on macOS
 brew install haskell-platform
+```
+## Running the Program
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/your-username/haskell-equation-solver.git
+    cd haskell-equation-solver
+    ```
+
+2. **Compile and Run the Haskell Program:**
+
+    ```bash
+    ghc Main.hs -o equation-solver
+    ./equation-solver
+    ```
+
+## Contributing
+
+Feel free to contribute to the project by submitting [issues](https://github.com/your-username/haskell-equation-solver/issues) or [pull requests](https://github.com/your-username/haskell-equation-solver/pulls). Your input is highly appreciated.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+---
+
