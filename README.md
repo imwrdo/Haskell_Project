@@ -1,3 +1,4 @@
+# Project Title
 This project presents a solution to a task from the subject "Programming Languages", which aims to develop programming skills in different languages.
 In the submitted project, I performed the task in the Haskell language.
 The content of the task:
