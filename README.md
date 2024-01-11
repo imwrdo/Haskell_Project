@@ -8,7 +8,7 @@ This project is a solution to a task from the "Programming Languages" course, de
 
 Given a natural number `n`, the goal is to find a natural number `m` for which the number of possible solutions of the equation:
 
-\[ \frac{1}{a} + \frac{1}{b} = \frac{1}{m} \]
+\frac{n!}{k!(n-k)!}
 
 where \(a\) and \(b\) are natural numbers, is greater than or equal to `n`.
 
